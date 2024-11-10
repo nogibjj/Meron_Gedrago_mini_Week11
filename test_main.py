@@ -40,7 +40,7 @@ def test_describe(spark):
 def test_query(spark):
     df = load_data(spark)
     result = query(spark, df, """SELECT * FROM Birthsdata 
-                   WHERE year = 2007", "Birthsdata""")
+                   WHERE year = 2007""", "Birthsdata")
     assert result is None
 
 
