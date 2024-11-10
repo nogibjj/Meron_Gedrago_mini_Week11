@@ -1,37 +1,48 @@
-[![CI](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml)
-## Template for Python projects with RUFF linter
+# Meron Gedrago miniproject Week 10
+[![CI](https://github.com/nogibjj/Meron_Gedrago_mini_Week10/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Meron_Gedrago_mini_Week10/actions/workflows/cicd.yml)
 
-![1 15_rust_built_python_tools](https://github.com/nogibjj/python-ruff-template/assets/58792/db5f7bda-a977-4c67-acbe-a70fe034fbdf)
+## Structure for this project 
 
+```
+├── .devcontainer/
+│   ├── devcontainer.json
+│   └── Dockerfile
+├── .github/
+│   └── workflows/
+│        └──cicd.yml
+├── mylib/lib/
+├── mydata/data/
+├── .gitignore
+├── visuals
+├── main.py
+├── test_main.py
+├── visuals
+├── Makefile
+└── README.md
 
+```
 
-1. First thing to do on launch is to open a new shell and verify virtualenv is sourced.
+## Purpose of the project  
 
-Things included are:
-
-* `Makefile`
-
-* `Pytest`
-
-* `pandas`
-
-* `Ruff`:  
-
-Run `make lint` which runs `ruff check`.  You can find out more info on [Ruff here](https://github.com/astral-sh/ruff).
-
-* `Dockerfile`
-
-* `GitHub copilot`
-
-* `jupyter` and `ipython` 
-
-* A base set of libraries for devops and web
-
-* `githubactions`
-
-## References
-
-![1 1-function-essence-of-programming](https://github.com/nogibjj/python-ruff-template/assets/58792/f7f33cd3-cff5-4014-98ea-09b6a29c7557)
+This project aims to use PySpark using a large dataset where we extract the dataset from a link into a local csv, load the csv into a local database and perform a SQL query on the the dataset.  
 
 
+### extracting and loading data
+
+Through codespaces, we extract and load the csv data, while displaying few lines below. 
+
+<img src="visuals/Screenshot 2024-11-10 at 2.22.20 AM.png">
+
+### Describe the data 
+
+After loading the data, we pull summary on the data through 'describe'. Find the output below 
+
+<img src="visuals/Screenshot 2024-11-10 at 2.24.06 AM.png">
+
+
+###  Query the data 
+
+We create a table that aggregate the births in a year and displays it in a table as the output is pictured below
+
+<img src="visuals/Screenshot 2024-11-10 at 2.25.51 AM.png">
 
