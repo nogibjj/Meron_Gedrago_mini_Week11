@@ -1,5 +1,5 @@
-# Meron Gedrago miniproject Week 10
-[![CI](https://github.com/nogibjj/Meron_Gedrago_mini_Week10/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Meron_Gedrago_mini_Week10/actions/workflows/cicd.yml)
+# Meron Gedrago miniproject Week 11
+[![CI](https://github.com/nogibjj/Meron_Gedrago_mini_Week11/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Meron_Gedrago_mini_Week11/actions/workflows/cicd.yml)
 
 ## Structure for this project 
 
@@ -10,10 +10,10 @@
 ├── .github/
 │   └── workflows/
 │        └──cicd.yml
-├── mylib/lib/
-├── mydata/data/
-├── .gitignore
+├── mylib/
+├── Notebook_Folder/
 ├── visuals
+├── .gitignore
 ├── main.py
 ├── test_main.py
 ├── visuals
@@ -24,25 +24,27 @@
 
 ## Purpose of the project  
 
-This project aims to use PySpark using a large dataset where we extract the dataset from a link into a local csv, load the csv into a local database and perform a SQL query on the the dataset.  
+This project aims to create a Databricks pipeline using Databricks. 
 
 
-### extracting and loading data
+### Introduction to project and background 
 
-Through codespaces, we extract and load the csv data, while displaying few lines below. 
+This project implements a Databricks ETL pipeline for retrieving and processing an airline safety dataset. Key features include a well-documented ETL notebook, Delta Lake for storage, Spark SQL for data transformations, and robust error handling with data validation. It incorporates data visualizations for insights and leverages an automated Databricks API trigger for continuous processing.
 
-<img src="visuals/Screenshot 2024-11-10 at 2.22.20 AM.png">
+The workflow utilizes a Makefile to automate tasks such as installation, testing, formatting (Python Black), linting (Ruff), and an all-in-one operation via GitHub Actions, enhancing efficiency and code quality.
 
-### Describe the data 
+The dataset, airline-safety.csv, sourced from the Aviation Safety Network, contains safety records for 56 airlines. It details seat kilometers flown weekly and segregates incidents, fatal accidents, and fatalities into two periods: 1985–1999 and 2000–2014.
 
-After loading the data, we pull summary on the data through 'describe'. Find the output below 
+### Steps taken in Databricks 
 
-<img src="visuals/Screenshot 2024-11-10 at 2.24.06 AM.png">
+1. Connect GitHub account to Databricks Workspace
+2. Create global init script for cluster start to store environment variables
+3. Establishes a connection to the Databricks environment using environment variables for authentication (SERVER_HOSTNAME, ACCESS_TOKEN and JOB_ID).
+4. Create a Databricks cluster that supports Pyspark
+5. Clone Github repo into Databricks workspace
+6. Create a job on Databricks to build an ETL pipeline
+7. Run the job and ensure that it has been completed (we should see the picture below)
+8. Push to github 
 
-
-###  Query the data 
-
-We create a table that aggregate the births in a year and displays it in a table as the output is pictured below
-
-<img src="visuals/Screenshot 2024-11-10 at 2.25.51 AM.png">
+<img src="visuals/Screenshot 2024-11-26 at 7.45.11 PM.png">
 
