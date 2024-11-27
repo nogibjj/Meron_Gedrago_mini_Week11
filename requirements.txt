@@ -14,5 +14,6 @@ pyspark
 tabulate 
 requests
 pandas
+python-dotenv
 
 
